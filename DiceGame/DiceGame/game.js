@@ -1,0 +1,5 @@
+
+
+function OnLoad() {
+    OnLoadDice();
+}

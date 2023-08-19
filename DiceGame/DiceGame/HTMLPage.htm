@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+    <META NAME="GENERATOR" Content="Microsoft Visual Studio">
+    <TITLE>Dice Game</TITLE>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <script src="game.js"></script>
+    <script src="dice.js"></script>
+
+    <template id="diceTemplate">
+        <div id="dice" class="dice">
+            <img id="number" src="./dice/1_dice.png" alt="1" width="70" height="70"/>
+        </div>
+    </template>
+</HEAD>
+<BODY onload="OnLoad()">
+    <div id="rollableDice" class="dice rollable">
+        <button onclick="RollDice()">
+            <img id="rollableDiceNumber" src="./dice/1_dice.png" alt="1" width="70" height="70"/>
+        </button>
+    </div>
+    <div id="upgrades" class="upgrades">
+        <div id="upgrade" class="upgradeBackground">
+            <div class="upgrade">
+                <p class="upgradeText">Double Dice Effect</p>
+                <img id="upgradeNumber" class="diceImage" src="./dice/1_dice.png" alt="1" width="50" height="50" />
+            </div>
+        </div>
+        <div id="upgrade" class="upgradeBackground">
+            <div class="upgrade"></div>
+        </div>
+    </div>
+    <div id="diceHolder" class="diceHolder"></div>
+
+</BODY>
+</HTML>
