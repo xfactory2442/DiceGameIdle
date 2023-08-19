@@ -22,7 +22,7 @@ function RollDice() {
 
     document.getElementById("rollableDiceNumber").src = "./dice/" + r + "_dice.png";
 
-    points += r;
+    points += r * 50;
     for (var i = 0; i < dice.length; i++) {
         dice[i].ChangeDice();
     }
