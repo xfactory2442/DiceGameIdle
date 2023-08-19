@@ -1,0 +1,55 @@
+.dice {
+    position: relative;
+    display:inline-block;
+    padding-left: 30px;
+}
+
+.diceImage {
+    position: relative;
+    display: inline-block;
+}
+
+.shopDice {
+    position: relative;
+    display: inline-block;
+    padding-left: 5px;
+    background-color: white;
+}
+
+.diceHolder {
+    position: absolute;
+    display: inline-block;
+    right: 50px;
+}
+
+.roleable {
+    position: absolute;
+    display: inline-block;
+}
+
+.upgrades {
+    position: absolute;
+    padding-top: 20px;
+    width: 30%;
+}
+
+.upgradeBackground {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+.upgrade {
+    background-color: lightslategrey;
+    width: 100%;
+    height: 100%;
+    border:solid;
+    border-block-color:lightgrey;
+}
+
+.upgradeText {
+    position: relative;
+    display: inline-block;
+}
