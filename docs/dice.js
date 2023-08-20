@@ -3,6 +3,7 @@ var diceTemplate = null;
 var dice = [];
 var points = 0;
 var diceSize = 6;
+var diceMultiplier = 1;
 
 function OnLoadDice() {
     diceTemplate = document.getElementById("diceTemplate");
@@ -15,6 +16,8 @@ function OnLoadDice() {
         var newLine = document.createElement("br");
         document.getElementById("diceHolder").appendChild(newLine);
     }
+
+    document.getElementById("pointsText").innerHTML = points;
 }
 
 function RollDice() {
@@ -22,10 +25,33 @@ function RollDice() {
 
     document.getElementById("rollableDiceNumber").src = "./dice/" + r + "_dice.png";
 
-    points += r * 50;
-    for (var i = 0; i < dice.length; i++) {
-        dice[i].ChangeDice();
+    AddPoints(r * diceMultiplier);
+}
+
+function GetId(x, y) {
+    return y * cubeSize + x
+}
+
+function AddPoints(num) {
+    if (points + num >= 0) {
+        points += num;
+        UpdateAllDice();
+        document.getElementById("pointsText").innerHTML = points;
+        return true;
     }
+    return false;
+}
+
+function UpdateAllDice() {
+    for (var i = 0; i < dice.length; i++) {
+        dice[i].UpdateDice();
+    }
+}
+
+function SetDiceMultiplier(multi) {
+    diceMultiplier = multi;
+    document.getElementById("diceMultiplier").innerHTML = "x" + diceMultiplier;
+    document.getElementById("diceMultiplier").style.display = "inline-block";
 }
 
 
@@ -37,10 +63,12 @@ class Dice {
 
         document.getElementById("dice").id = "dicex" + this.x + "y" + this.y;
         document.getElementById("number").id = "numberx" + this.x + "y" + this.y;
+        document.getElementById("diceIdText").innerHTML = GetId(this.x, this.y);
+        document.getElementById("diceIdText").id = "diceIdTextx" + this.x + "y" + this.y;
     }
 
-    ChangeDice() {
-        var newNum = Math.floor(points / (diceSize** (this.y * cubeSize + this.x))) % 6 + 1;
+    UpdateDice() {
+        var newNum = Math.floor(points / (diceSize** GetId(this.x, this.y))) % 6 + 1;
 
         document.getElementById("numberx" + this.x + "y" + this.y).src = "./dice/" + newNum + "_dice.png";
         if (this.value == newNum) {

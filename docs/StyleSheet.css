@@ -10,6 +10,11 @@
     display: inline-block;
 }
 
+.diceIdText {
+    position:absolute;
+    display: inline-block;
+}
+
 .shopDice {
     position: relative;
     display: inline-block;
@@ -31,7 +36,12 @@
 .upgrades {
     position: absolute;
     padding-top: 20px;
-    width: 30%;
+}
+
+.upgradeCostText {
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
 }
 
 .upgradeBackground {
@@ -53,4 +63,25 @@
 .upgradeText {
     position: relative;
     display: inline-block;
+}
+
+.upgradeButton {
+    position:relative;
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+}
+
+.points {
+    position: absolute;
+    display:inline-block;
+    top: 0px;
+    left: 45%;
+    width: 10%;
+    height: 10%;
+    background-color: dimgrey;
+}
+
+.pointsText {
+    text-align:center;
 }
