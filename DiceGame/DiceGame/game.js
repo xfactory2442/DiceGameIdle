@@ -2,4 +2,5 @@
 
 function OnLoad() {
     OnLoadDice();
+    OnLoadUpgrades();
 }

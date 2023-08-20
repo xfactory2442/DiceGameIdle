@@ -18,9 +18,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="HTMLPage.htm">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="StyleSheet.css">
       <Filter>Source Files</Filter>
     </None>
@@ -30,8 +27,11 @@
     <None Include="dice.js">
       <Filter>Source Files\js</Filter>
     </None>
-    <None Include="unlock.js">
+    <None Include="upgrade.js">
       <Filter>Source Files\js</Filter>
+    </None>
+    <None Include="index.htm">
+      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -5,29 +5,41 @@
     <link rel="stylesheet" href="StyleSheet.css" />
     <script src="game.js"></script>
     <script src="dice.js"></script>
+    <script src="upgrade.js"></script>
 
     <template id="diceTemplate">
         <div id="dice" class="dice">
-            <img id="number" src="./dice/1_dice.png" alt="1" width="70" height="70"/>
+            <img id="number" src="./dice/1_dice.png" alt="1" width="70" height="70">
+                <p id="diceIdText" class="diceIdText">1</p>
+            <img />
         </div>
+    </template>
+    <template id="upgradeTemplate">
+        <div id="upgrade" class="upgradeBackground">
+            <div id="upgradeInner" class="upgrade">
+                <p id="upgradeText" class="upgradeText">Double Dice Effect</p>
+                <p id="upgradeCost" class=" upgradeCostText"></p>
+                <button id="upgradeBuy" class="upgradeButton" onclick="BuyUpgrade(this.id)">Buy</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="upgradeNumberTemplate">
+        <img id="upgradeNumber" class="diceImage" src="./dice/1_dice.png" alt="1" width="50" height="50" />
     </template>
 </HEAD>
 <BODY onload="OnLoad()">
-    <div id="rollableDice" class="dice rollable">
-        <button onclick="RollDice()">
-            <img id="rollableDiceNumber" src="./dice/1_dice.png" alt="1" width="70" height="70"/>
-        </button>
+    <div id="roleableDiceArea" style="display:inline-block">
+        <div id="rollableDice" class="dice rollable">
+            <button onclick="RollDice()">
+                <img id="rollableDiceNumber" src="./dice/1_dice.png" alt="1" width="70" height="70" />
+            </button>
+        </div>
+        <h1 id="diceMultiplier" style="display:none">x1</h1>
     </div>
-    <div id="upgrades" class="upgrades">
-        <div id="upgrade" class="upgradeBackground">
-            <div class="upgrade">
-                <p class="upgradeText">Double Dice Effect</p>
-                <img id="upgradeNumber" class="diceImage" src="./dice/1_dice.png" alt="1" width="50" height="50" />
-            </div>
-        </div>
-        <div id="upgrade" class="upgradeBackground">
-            <div class="upgrade"></div>
-        </div>
+    <div id="upgrades" class="upgrades"></div>
+    <div id="points" class="points">
+        <h1 id="pointsText" class="pointsText"></h1>
     </div>
     <div id="diceHolder" class="diceHolder"></div>
 

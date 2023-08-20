@@ -129,11 +129,11 @@
   <ItemGroup>
     <None Include="dice.js" />
     <None Include="game.js" />
-    <None Include="HTMLPage.htm">
+    <None Include="index.htm">
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="StyleSheet.css" />
-    <None Include="unlock.js" />
+    <None Include="upgrade.js" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
