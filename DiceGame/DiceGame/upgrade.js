@@ -6,7 +6,8 @@ function OnLoadUpgrades() {
     upgradeTemplate = document.getElementById("upgradeTemplate");
     upgradeDiceTemplate = document.getElementById("upgradeDiceTemplate");
 
-    upgrades[upgrades.length] = new Upgrade(upgrades.length, "Increase Dice Value by 2", [3, 2], function () { SetDiceMultiplier(diceMultiplier * 2); });
+    upgrades[upgrades.length] = new Upgrade(upgrades.length, "Increase Dice Value by 2", [3, 1], function () { SetDiceMultiplier(diceMultiplier * 2); });
+    upgrades[upgrades.length] = new Upgrade(upgrades.length, "Increase Dice Value by 3", [4, 4], function () { SetDiceMultiplier(diceMultiplier * 3); });
 }
 
 function BuyUpgrade(id) {

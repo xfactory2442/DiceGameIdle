@@ -18,10 +18,10 @@ function OnLoadDice() {
     }
 }
 
-function RollDice() {
+function RollDice(dice) {
     var r = Math.floor(Math.random() * diceSize) + 1;
 
-    document.getElementById("rollableDiceNumber").src = "./dice/" + r + "_dice.png";
+    document.getElementById(dice).src = "./dice/" + r + "_dice.png";
 
     AddPoints(r * diceMultiplier);
 }

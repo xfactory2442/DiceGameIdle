@@ -39,9 +39,12 @@
 <BODY onload="OnLoad()">
     <div id="roleableDiceArea" style="display:inline-block">
         <div id="rollableDice" class="dice rollable">
-            <button onclick="RollDice()">
+            <button onclick="RollDice('rollableDiceNumber')">
                 <img id="rollableDiceNumber" src="./dice/1_dice.png" alt="1" width="70" height="70" />
             </button>
+        </div>
+        <div id="rollableDiceAuto" class="dice rollable">
+            <img id="rollableDiceNumberAuto" src="./dice/1_dice.png" alt="1" width="70" height="70" />
         </div>
         <h1 id="diceMultiplier" style="display:none">x1</h1>
     </div>
