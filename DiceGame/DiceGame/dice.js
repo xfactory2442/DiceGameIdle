@@ -16,8 +16,6 @@ function OnLoadDice() {
         var newLine = document.createElement("br");
         document.getElementById("diceHolder").appendChild(newLine);
     }
-
-    document.getElementById("pointsText").innerHTML = points;
 }
 
 function RollDice() {
@@ -36,7 +34,6 @@ function AddPoints(num) {
     if (points + num >= 0) {
         points += num;
         UpdateAllDice();
-        document.getElementById("pointsText").innerHTML = points;
         return true;
     }
     return false;
