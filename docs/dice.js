@@ -16,14 +16,12 @@ function OnLoadDice() {
         var newLine = document.createElement("br");
         document.getElementById("diceHolder").appendChild(newLine);
     }
-
-    document.getElementById("pointsText").innerHTML = points;
 }
 
-function RollDice() {
+function RollDice(dice) {
     var r = Math.floor(Math.random() * diceSize) + 1;
 
-    document.getElementById("rollableDiceNumber").src = "./dice/" + r + "_dice.png";
+    document.getElementById(dice).src = "./dice/" + r + "_dice.png";
 
     AddPoints(r * diceMultiplier);
 }
@@ -36,7 +34,6 @@ function AddPoints(num) {
     if (points + num >= 0) {
         points += num;
         UpdateAllDice();
-        document.getElementById("pointsText").innerHTML = points;
         return true;
     }
     return false;
