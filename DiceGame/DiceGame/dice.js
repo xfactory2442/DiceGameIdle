@@ -1,7 +1,6 @@
 var cubeSize = 6;
 var diceTemplate = null;
 var dice = [];
-var points = 0;
 var diceSize = 6;
 var diceMultiplier = 1;
 
