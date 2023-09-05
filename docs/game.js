@@ -1,4 +1,5 @@
 var auto = null;
+var points = 0;
 
 function OnLoad() {
     OnLoadDice();
@@ -9,4 +10,8 @@ function OnLoad() {
 
 function Auto() {
     RollDice("rollableDiceNumberAuto");
+}
+
+function GetPointsFromDice(dice) {
+       
 }
